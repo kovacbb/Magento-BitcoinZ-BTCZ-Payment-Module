@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="payment" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000" translate="label">
+			<group id="btcz" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>BTCz.in - by kovach</label>
+				<field id="active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enabled</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Title</label>
+				</field>
+				<field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="29" translate="label" type="select">
+					<label>New Order Status</label>
+					<source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>
+				</field>
+				<field id="after_complete" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+					<label>Order Status after Payment</label>
+					<comment/>
+					<source_model>Kovach\Btcz\Model\Config\Source\AfterComplete</source_model>
+				</field>
+				<field id="wallet_address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="31" translate="label" type="text">
+					<label>Wallet Address</label>
+					<comment>Your BTCz address where the payment will go.</comment>
+				</field>
+				<field id="merchant_email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="32" translate="label" type="text">
+					<label>Merchant Email</label>
+					<comment>Your email address.</comment>
+				</field>
+				<field id="secret_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="33" translate="label" type="text">
+					<label>Secret Key</label>
+					<comment>Custom alphanumeric secret (8-32 char) - click GENERATE button</comment>
+				</field>
+				<field id="generate" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="34" translate="label" type="text">
+					<frontend_model>Kovach\Btcz\Block\System\Config\Random</frontend_model>
+				</field>
+				<field id="allowspecific" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="allowspecific">
+					<label>Payment from Applicable Countries</label>
+					<source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+				</field>
+				<field id="specificcountry" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="multiselect">
+					<label>Payment from Applicable Countries</label>
+					<source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+					<can_be_empty>1</can_be_empty>
+				</field>
+				<field id="sort_order" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="text">
+					<label>Sort Order</label>
+				</field>
+				<!--field id="instructions" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="textarea">
+					<label>Instructions</label>
+				</field-->
+			</group>
+			<tab>sales</tab>
+			<resource>Kovach_Btcz::config_kovach_btcz</resource>
+		</section>
+	</system>
+</config>

@@ -1,0 +1,9 @@
+<?php 
+$order = $block->getOrder();
+$incrementid = $order->getIncrementId();
+$total = $order->getGrandTotal();
+?>
+
+<div class="checkout-success-iframe">
+	<?php echo $iframe = $block->getIframe($incrementid, $total); ?>
+</div>

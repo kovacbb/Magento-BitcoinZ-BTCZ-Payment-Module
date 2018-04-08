@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<btcz>
+				<active>1</active>
+				<model>Kovach\Btcz\Model\Payment\Btcz</model>
+				<order_status>pending</order_status>
+				<after_complete>processing</after_complete>
+				<title>BitcoinZ (BTCZ)</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+				<wallet_address/>
+				<merchant_email/>
+				<secret_key/>
+			</btcz>
+		</payment>
+	</default>
+</config>

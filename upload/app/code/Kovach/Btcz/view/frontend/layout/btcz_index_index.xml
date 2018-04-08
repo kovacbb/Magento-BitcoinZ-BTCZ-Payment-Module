@@ -1,0 +1,30 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+	<head>
+        <!--title>Titlename</title-->
+        <!-- 
+		demo
+		<css src="Kovach_Btcz::css/css.css"/>
+		<script src="Kovach_Btcz::js/js.js"/>
+		<css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+		<script src="path/file.js" defer="defer"/>
+		<link src="http://url.com" src_type="url"/>
+		<remove src="path/remove/file.css"/>
+
+		-->
+    </head> 
+
+    <body>
+
+
+        <referenceContainer name="sidebar.main">
+            <block class="Kovach\Btcz\Block\Index\Sidebar" name="btcz_index_sidebar" before="-" template="Kovach_Btcz::btcz_index_sidebar.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Kovach\Btcz\Block\Index\Index" name="btcz_index_index" template="Kovach_Btcz::btcz_index_index.phtml"/>
+        </referenceContainer>
+
+
+    </body>
+</page>

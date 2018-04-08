@@ -1,0 +1,13 @@
+<?php echo $id = $_GET['o']; ?>
+
+<?php if ($id): ?>
+	<div class="checkout-success-pingback" style="text-align:center;">
+		<p><?php //echo ($block->changeState($id)); ?></p>
+		<p><?php //echo $block->changeState($id); ?></p>
+	</div>
+<?php else: ?>
+	<div class="checkout-success-pingback" style="text-align:center;">
+		<h3>Invalid Payment Id</h3>
+		<p>Your payment wasn't processed.</p>
+	</div>
+<?php endif; ?>

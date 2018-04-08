@@ -1,0 +1,22 @@
+{
+    "name": "kovach/module-btcz",
+    "description": "BitcoinZ BTCZ Payment Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "kovacbb@gmail.com",
+            "name": "kovach"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "kovach\\Btcz\\": ""
+        }
+    }
+}
